@@ -1,6 +1,5 @@
 import { Input } from 'antd';
-
-export default function ComplaintTextarea() {
+export default function ComplaintTextarea({ value, onChange }) {
   return (
     <Input.TextArea
       rows={6}
@@ -9,6 +8,8 @@ export default function ComplaintTextarea() {
       className="textarea-custom"
       maxLength={600}
       showCount
+      value={value}
+      onChange={onChange}
     />
   );
 }

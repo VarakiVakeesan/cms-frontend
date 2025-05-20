@@ -1,0 +1,54 @@
+.response-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.response-card {
+  max-width: 680px;
+  width: 100%;
+  padding: 2rem 2rem 1.7rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 38px 0 rgba(0,33,71,0.08);
+  background: #f6f9fe;
+  border-left: 5px solid #1677ff;
+}
+
+.response-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.response-icon {
+  font-size: 2rem;
+  color: #1677ff;
+  margin-right: 0.8rem;
+}
+
+.response-title {
+  margin: 0;
+  color: #002147;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.response-solution {
+  font-size: 1.13rem;
+  color: #273552;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .response-card {
+    padding: 1.1rem 0.5rem 1rem 0.9rem;
+  }
+  .response-title {
+    font-size: 1.12rem !important;
+  }
+  .response-icon {
+    font-size: 1.3rem;
+  }
+}
