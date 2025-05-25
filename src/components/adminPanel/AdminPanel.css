@@ -1,0 +1,30 @@
+/* src/pages/AdminPanelPage.css */
+.admin-panel-bg {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f0f4fa 60%, #d5e6fb 100%);
+}
+.admin-panel-card {
+  width: 100%;
+  max-width: 680px;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 38px 0 rgba(0,33,71,0.11);
+}
+.admin-panel-title {
+  text-align: center;
+  color: #002147;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.admin-panel-btn {
+  font-size: 1.2rem;
+  padding: 1.3rem 0;
+  border-radius: 10px;
+  font-weight: 700;
+}
