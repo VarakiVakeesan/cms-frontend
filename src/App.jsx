@@ -5,6 +5,10 @@ import HomePage from './pages/HomePage'
 import NavBar from './components/navbar/NavBar'
 import AdminLoginPage from './pages/AdminLoginPage'
 import ResponsePage from './pages/ResponsePage'
+import AdminProtectedRoute from './components/adminLogin/AdminProtectedRoute'
+import AdminComplaintListPage from './pages/AdminComplaintListPage'
+import AdminDashboard from './components/adminDashboard/AdminDashboard'
+import AdminDashBoardPage from './pages/AdminDashBoardPage'
 
 function App() {
 
@@ -16,6 +20,17 @@ function App() {
     <Route path="/" element={<HomePage/>} />
     <Route path="/admin-login" element={<AdminLoginPage/>} />
     <Route path='/response' element={<ResponsePage/>} />
+    <Route path="/admin/complaints" element={
+          <AdminProtectedRoute>
+            <AdminComplaintListPage/>
+          </AdminProtectedRoute>
+        } />
+    
+    <Route path="/admin/dashboard" element={
+          <AdminProtectedRoute>
+    <AdminDashBoardPage/>
+          </AdminProtectedRoute>
+    } />
     </Routes>
    </BrowserRouter>
   )

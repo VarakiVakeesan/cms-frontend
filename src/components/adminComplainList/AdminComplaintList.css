@@ -1,0 +1,70 @@
+.complaint-list-bg {
+  min-height: 100vh;
+  background: linear-gradient(110deg, #002147 65%, #1677ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 4vw;
+}
+
+.complaint-list-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.3rem 2rem;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 10px 38px 0 rgba(0,33,71,0.09);
+}
+
+.complaint-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+@media (max-width: 700px) {
+  .complaint-list-bg {
+    padding-top: 2vw;
+  }
+  .complaint-list-card {
+    padding: 1.1rem 0.3rem 1.5rem 0.3rem;
+    max-width: 98vw;
+    border-radius: 20px;
+  }
+  .complaint-list-header h2 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0;
+  }
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    font-size: 13px !important;
+    padding: 6px 4px !important;
+  }
+  .ant-table {
+    font-size: 13px !important;
+  }
+  .ant-pagination {
+    font-size: 13px !important;
+  }
+  .ant-btn {
+    font-size: 13px !important;
+    padding: 0 10px !important;
+  }
+  .complaint-modal .ant-modal-content {
+    border-radius: 13px;
+    padding: 0 !important;
+  }
+  .complaint-modal .ant-modal-title {
+    font-size: 1rem !important;
+  }
+}
+
+.complaint-modal .ant-modal-content {
+  border-radius: 18px;
+}
+.complaint-modal .ant-modal-title {
+  color: #1677ff;
+  font-weight: 800;
+  font-size: 1.3rem;
+}

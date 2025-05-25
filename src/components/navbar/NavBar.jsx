@@ -24,10 +24,16 @@ const menuItems = [
     label: <Link to="/complaint">File Complaint</Link>,
   },
   {
-    key: '/admin',
+    key: '/admin/complaints',
     icon: <CrownOutlined />,
-    label: <Link to="/admin">Admin Panel</Link>,
+    label: <Link to="/admin/complaints">Admin Panel</Link>,
   },
+  {
+    key: '/dashboard',
+    icon: <CrownOutlined />,
+    label: <Link to="/admin/dashboard">Dashboard</Link>,
+  },
+
   {
     key: '/contact',
     icon: <PhoneOutlined />,

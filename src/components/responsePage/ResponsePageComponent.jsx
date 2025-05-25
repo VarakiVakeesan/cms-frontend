@@ -25,12 +25,8 @@ export default function ResponsePageComponent({ responseData }) {
           <Paragraph className="responsepage-value">{responseData.complaint}</Paragraph>
         </div>
         <div className="responsepage-section">
-          <Text className="responsepage-label"><UserOutlined /> NIC No:</Text>
-          <Paragraph className="responsepage-value">{responseData.nic}</Paragraph>
-        </div>
-        <div className="responsepage-section">
-          <Text className="responsepage-label"><HomeOutlined /> Apartment No:</Text>
-          <Paragraph className="responsepage-value">{responseData.apartmentNo}</Paragraph>
+          <Text className="responsepage-label"><HomeOutlined /> Flat No:</Text>
+          <Paragraph className="responsepage-value">{responseData.flat_no}</Paragraph>
         </div>
         <Divider />
         <div className="responsepage-section">

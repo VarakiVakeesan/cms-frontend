@@ -1,11 +1,31 @@
-import { Form, Input, Button, Card } from 'antd';
+import React, { useState } from 'react';
+import { Form, Input, Button, Card, message } from 'antd';
 import { LockOutlined, UserOutlined, SafetyCertificateOutlined } from '@ant-design/icons';
+import { useAdminAuth } from '../../context/AdminAuthContext'; // Adjust import path if needed
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './AdminLogin.css';
 
 export default function AdminLogin() {
-  const onFinish = (values) => {
-    // Handle admin login here
-    console.log('Admin Login:', values);
+  const [loading, setLoading] = useState(false);
+  const { login } = useAdminAuth();
+  const navigate = useNavigate();
+
+  const onFinish = async (values) => {
+    setLoading(true);
+    try {
+      const basicToken = 'Basic ' + btoa(`${values.username}:${values.password}`);
+      // Use an admin-protected endpoint to test login (e.g. complaint list)
+      await axios.get('http://127.0.0.1:5000/api/admin/complaints?limit=1', {
+        headers: { Authorization: basicToken },
+      });
+      login(values.username, values.password); // Save token in context
+      setLoading(false);
+      navigate('/admin/complaints'); // Redirect to complaints list page
+    } catch (err) {
+      setLoading(false);
+      message.error('Invalid username or password');
+    }
   };
 
   return (
@@ -58,6 +78,7 @@ export default function AdminLogin() {
               size="large"
               block
               className="admin-login-btn"
+              loading={loading}
             >
               Login
             </Button>

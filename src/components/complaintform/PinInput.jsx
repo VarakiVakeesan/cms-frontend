@@ -1,13 +1,14 @@
 import { Input } from 'antd';
-export default function NICInput({ value, onChange }) {
+export default function PinInput({ value, onChange }) {
   return (
-    <Input
-      name="nic"
-      placeholder="NIC No"
+    <Input.Password
+      name="pinNo"
+      placeholder="PIN No"
       size="large"
       className="input-custom"
       value={value}
       onChange={onChange}
+      maxLength={8}
     />
   );
 }
