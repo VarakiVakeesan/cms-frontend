@@ -9,6 +9,8 @@ import AdminProtectedRoute from './components/adminLogin/AdminProtectedRoute'
 import AdminComplaintListPage from './pages/AdminComplaintListPage'
 import AdminDashboard from './components/adminDashboard/AdminDashboard'
 import AdminDashBoardPage from './pages/AdminDashBoardPage'
+import AdminPanel from './components/adminPanel/AdminPanel'
+import AdminFlatOwnerList from './components/adminPanel/AdminFlatOwnerList'
 
 function App() {
 
@@ -30,6 +32,16 @@ function App() {
           <AdminProtectedRoute>
     <AdminDashBoardPage/>
           </AdminProtectedRoute>
+    } />
+    <Route path="/admin-panel" element={
+      <AdminProtectedRoute>
+        <AdminPanel/>
+      </AdminProtectedRoute>
+    } />
+    <Route path="/admin-flat-owners" element={
+      <AdminProtectedRoute>
+        <AdminFlatOwnerList/>
+      </AdminProtectedRoute>
     } />
     </Routes>
    </BrowserRouter>

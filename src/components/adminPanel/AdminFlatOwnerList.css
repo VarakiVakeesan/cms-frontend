@@ -1,0 +1,28 @@
+/* src/components/flatowners/AdminFlatOwnerList.css */
+.flat-owner-list-bg {
+  min-height: 88vh;
+  background: #f7faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flat-owner-list-card {
+  max-width: 730px;
+  width: 100%;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 38px 0 rgba(0,33,71,0.13);
+  padding: 1.5rem 1.2rem 2.2rem 1.2rem;
+}
+.flat-owner-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.add-flat-owner-btn {
+  font-size: 1.08rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+}
